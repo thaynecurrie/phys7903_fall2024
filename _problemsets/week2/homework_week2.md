@@ -1,10 +1,11 @@
 # _Python for Scientific Data Analysis_
 
 
-#  Basic Python
+#  Basic Python/Data Structures
 
-## Homework - Week 2 (part 1 of 2) (due Sept 9)
+## Homework - Week 2 (due Sept 11)
 
+### Part 1: Basic Python
 ### 1. Formatted Printing 
 
 Try executing these two lines of code at Python prompt or within a Jupyter notebook cell:
@@ -149,3 +150,100 @@ def start():
 
 * part A [you don't need to write anything for the HW, just understand this part] - figure out how to get the game started. Look at the source code to see the order in which each function is called.  Make sure you understand the ``if-then`` structures.
 * part B - add another option besides the left or right door (with appropriate print statements) .  Make the outcome dependent upon chance (hint use ``np.random.rand``).
+
+### Part 2: Data Structures
+
+### 6. Dictionaries
+
+Use three defined dictionaries with the following entries -- 1. city + country abbreviation, 2. country abbreviation + skyscraper, 3. skyscraper + height.   
+
+Assume the following building heights (i.e. this will be dictionary number 3):
+ Petronas Towers - 1483 ft
+ WTC - 1776 ft
+ Eiffel Tower - 1083 ft
+ 
+ Write a for-loop that prints out the country, abbreviation, city, building, and height converted to au (assume 1 foot = 2.0375e-12 au):
+ 
+ ```
+The tallest building in the city of Paris, FR is the Eiffel Tower with a height of 2.207e-09 au
+The tallest building in the city of New York, USA is the WTC with a height of 3.619e-09 au
+The tallest building in the city of Kuala Lumpur, MY is the Petronas Towers with a height of 3.022e-09 au
+ ```
+
+### 7. Lists, Arrays, Loops and Type Conversions:
+
+Start with a list 4 elements long, including a mix of floating point numbers and integers: $\pi$, e, 3.1 and 5.
+
+Remove 3.1 using the ``remove`` function and array indexing.  
+
+Append Euler's gamma constant to the list
+
+Write a line of code that prints out ``a``, repeated 3 times
+
+Write a line of code that prints out each element of ``a`` multiplied by 3
+
+Write a for-loop that prints out each element of ``a`` multiplied by 3
+
+### 8. Slicing 
+
+Consider the array:
+
+``a=[2,3,5,6,8,9,10]``
+
+Use slicing to produce the following:
+
+ ``[2,5,8,10]``
+ 
+ ``[6,8,9]``
+ 
+ ``[10, 9, 8, 6, 5, 3, 2]``
+ 
+### 9. Slicing 
+ 
+ Convert ``a`` to an array and then use conditional/boolean slicing to print out
+ 
+ ``array([ 6,  8,  9, 10])``
+ 
+ 
+ ``array([ 2,  8,  9, 10])``
+
+### 10. Sequence Function 
+
+Consider three lists -- episode=['Eegah','Deathstalker','Space Mutiny']; line=["Watch out for Snakes","He's Batman","Big McLarge Huge"] ; season = [5,7,8]
+
+Use the ``zip`` sequence function in a for-loop to produce the following output:
+
+```
+The best line of the episode Eegah in season 5 was "Watch out for Snakes" 
+The best line of the episode Deathstalker in season 7 was "He's Batman" 
+The best line of the episode Space Mutiny in season 8 was "Big McLarge Huge" 
+```
+
+### 11. Sequence Functions
+ 
+ Consider the example shown in the data struct part 3 notes of the list comprehension for four stars wth different names ``HIP 99770, AF Lep, HR 8799, Vega.``.  It used ``zip`` to advance each element of starname, spectype, starmag, and dstar 
+ 
+ Now, add the use of ``enumerate`` to write a for-loop printing out the number of the star in the list and an indexed version of``absmag`` at each interation and then print the full array of ``absmag`` outside of the for-loop.  Your answer should look like this when you run the code:
+ 
+```
+The absolute magnitude of star number 1 with name HIP 99770 with spectral type A5V is 1.850
+The absolute magnitude of star number 2 with name AF Lep with spectral type F8V is 4.159
+The absolute magnitude of star number 3 with name HR 8799 with spectral type F0V is 2.923
+The absolute magnitude of star number 4 with name Vega with spectral type A0V is 0.568
+```
+as before, and then
+
+```
+[1.84989488 4.15932603 2.92251889 0.56754637]
+```
+outside of the loop.
+
+### 12. List Comprehensions
+ 
+ Consider a list ``vals=[.1,2,.4,3]``
+ 
+ Write a list comprehension returning a variable ``vals2`` which equals ``[6,9]`` (i.e. vals[1] and vals[3] each times 3) using the value of 1/x versus 1/x$^{2}$ for each element ``x`` of ``vals`` as the conditional.
+ 
+ HINT: the pseudo-code for this looks something like 
+ 
+ "answer = list_comprehension( [ some math is performed] ... [some statement comparing 1/x and 1/x$^{2}$] )"
