@@ -1,8 +1,8 @@
 # _Python for Scientific Data Analysis_
 
-## Homework - Week 4 (part 1)
+## Homework - Week 4 (due September 18)
 
-### 1. Sequence Function (in-class)
+### 1. Sequence Function
 
 Consider three lists -- episode=['Eegah','Deathstalker','Space Mutiny']; line=["Watch out for Snakes","He's Batman","Big McLarge Huge"] ; season = [5,7,8]
 
