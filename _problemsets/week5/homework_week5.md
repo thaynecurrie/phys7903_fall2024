@@ -62,5 +62,28 @@ Consider this system of linear equations :
 * Solve this system of equations with i) ``np.linalg.solve`` and ii) ``np.linalg.inv`` + ``np.dot``
 
 * Verify that the values for $a_{o}$, $a_{1}$, and $a_{2}$ provide an exact solution (hint: verify that the lefthand side of the equation yields the righthand side).
+
+### 4. Performing SVD 
+
+Consider the matrix ...
+
+np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+* What happens when you try to invert this matrix directly?  Why? How could you have determined this outcome ahead of time?
+
+* Use SVD to decompose this matrix.  Based on the singular values, where should you truncate $\Sigma$ (i.e. which ``rcond`` value)?
+
+* Given $\Sigma$ what is the "effective" rank of the (decomposed) matrix?
+
+
+### 5. Truncated SVD 
+
+Go back to the 91x91 matrix filled with random numbers.  
+
+* Regenerate this matrix as ``aaa=np.random.rand(91,91)``
+* Compute the rank of this matrix
+* Re-compute the rank of this matrix if you first decompose it by SVD, truncate terms in $\Sigma$ with ``rcond < 1e-2`` and then re-compose it.
+* Compute the variance treating the original matrix aaa as $\bar{x}$ and the re-composed matrix as $x$ and flattening both matrices into 1-D vectors.
+
  
  
