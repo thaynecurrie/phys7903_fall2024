@@ -1,6 +1,6 @@
 # _Python for Scientific Data Analysis_
 
-## Homework - Week 6 (Due Oct 14)
+## Homework - Week 6 (Due Oct 11)
 
 ### 1. Eigendecomposition (in class)
 
