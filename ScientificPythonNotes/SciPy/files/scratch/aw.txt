@@ -1,0 +1,230 @@
+Title: Circumstellar Dust Disks in Taurus-Auriga: The Submillimeter Perspective 
+Authors: Andrews S.M., Williams, J.P.
+Table: Submillimeter Properties of Taurus-Auriga Disks
+================================================================================
+Byte-by-byte Description of file: datafile1.txt
+--------------------------------------------------------------------------------
+   Bytes Format Units       Label     Explanations
+--------------------------------------------------------------------------------
+   1- 17 A17    ---         Name      Object name
+  19- 21 A3     ---         SED       SED classification type (1)
+  23- 24 A2     ---         SpType    Spectral type from the literature
+      26 A1     ---       l_F350      The 3{sigma} limit flag on F350 
+  27- 32 I6     mJy         F350      ? Flux density at 350{mu}m  
+  34- 37 I4     mJy       e_F350      ? The 1{sigma} error in F350 (2)
+      39 A1     ---       l_F450      The 3{sigma} limit flag on F450
+  40- 44 I5     mJy         F450      ? Flux density at 450{mu}m  
+  46- 49 I4     mJy       e_F450      ? The 1{sigma} error in F450 (2)
+      51 A1     ---       l_F850      The 3{sigma} limit flag on F850 
+  52- 57 F6.1   mJy         F850      ? Flux density at 850{mu}m  
+  59- 63 F5.1   mJy       e_F850      ? The 1{sigma} error in F85 (2)
+      65 A1     ---       l_F1.3      The 3{sigma} limit flag on F1.3
+  66- 69 I4     mJy         F1.3      ? Flux density at 1.3mm  
+  71- 75 F5.1   mJy       e_F1.3      ? The 1{sigma} error in F1.3 (2)
+      77 A1     ---       l_Mass      The 3{sigma} limit flag on Mass
+  78- 83 F6.4   solMass     Mass      Disk mass in solar units  
+      85 A1     ---       l_Sp+Index  The 3{sigma} limit flag on Sp+Index
+  86- 89 F4.2   ---         Sp+Index  ? Submillimeter continuum slope 
+  91- 94 F4.2   ---       e_Sp+Index  ? The 1{sigma} error in Sp+Index 
+  96-102 A7     ---         Notes     Additional notes (3)
+--------------------------------------------------------------------------------
+Note (1): 
+    FS = Flat Spectrum.
+Note (2): Quoted errors are the 1-{sigma} rms noise levels and do not include 
+          systematic errors in the absolute flux calibration (~25% at 350 and 
+          450{mu}m, ~10% at 850{mu}m, and ~20% at 1.3mm). 
+Note (3):
+    1 = 450 and 850{mu}m data are from the JCMT SCUBA archive.  The original 
+        data were taken at various times between 1997 and 2002 and were 
+        reduced in the same way described in Section 2 with slight 
+        modifications for the different filter set before 1999 November.  
+    2 = Flux densities for V892 Tau (except 1.3mm) and AB Aur are from 
+        Mannings (1994).  Flux densities for HL Tau are taken from the 
+        long-term, repeated measurements at SCUBA (450 and 850{mu}m: see 
+http://www.jach.hawaii.edu/JCMT/continuum/calibration/sens/secondary_2004.html 
+        and Jenness et al. 2002).  Flux densities for RY Tau (except 1.3mm), 
+        DG Tau (except 350{mu}m), and DL Tau (except 1.3mm) are taken from 
+        Mannings & Emerson (1994).  The 1.3mm flux density for BP Tau was taken
+        from Dutrey, Guilloteau, & Simon (2003).  
+    3 = 1.3mm flux densities from Beckwith et al. (1990).  
+    4 = 1.3mm flux densities from Osterloh & Beckwith (1995).  
+    5 = 1.3mm flux densities from Motte & Andre (2001).  
+    6 = Additional submillimeter flux densities 
+        (Adams, Emerson, & Fuller 1990, Beckwith & Sargent 1991 ,
+        Mannings 1994) were used in determining Sp+Index.  
+    7 = These sources have anomalous continuum slopes, and so are excluded from
+        the analysis in Section 3.3.  Two of these objects with 850{mu}m 
+        detections are known to be variable centimeter radio sources (V773 Tau 
+        and V410 Tau).  Because V410 Tau has no signatures of disk emission 
+        throughout its SED, we assume that its submillimeter flux is not from 
+        a dust disk, and instead use a 3{sigma} upper limit of 5 mJy at 
+        850{mu}m in all the analysis.  V773 Tau has a slight infrared excess, 
+        and so we consider the submillimeter emission to be from the disk.  
+        The anomalous slopes for the other sources could be due to 
+        contamination from non-disk emission at the longest wavelengths, or 
+        errors in the absolute calibrations at different wavelengths.  See 
+        the Appendix regarding CY Tau.  
+    8 = References for submillimeter maps of some Class I and FS YSOs in the 
+        literature.  See Young et al. (2003) for maps of 04016+2610, 04166+2706
+        (also Shirley et al. 2000), 04169+2702, 04239+2436 (also 
+        Chini et al. 2001), 04248+2612, 04295+2251, 04302+2247, 04361+2547, 
+        and 04381+2540 (also Hogerheijde & Sandell 2000).  See 
+        Hogerheijde & Sandell (2000) for maps of 04325+2402 and 04368+2557 
+        (also Chini et al. 2001).  Chandler & Richer (2000) provide maps of 
+        HL Tau and Sandell & Weintraub (2001) provide maps of L1551 IRS 5.  
+        Maps of the extended submillimeter emission around T Tau are provided 
+        by Weintraub et al. (1999). 
+--------------------------------------------------------------------------------
+04016+2610        I        12477  193                             130   5.   0.02    3.48 0.24 5,8
+04113+2758        II  M2    7621  219                             410  40.   0.09    2.23 0.24 5
+04154+2823        FS         440   83    495  185   140.    6.               0.006   1.39 0.27 
+04166+2706        I         6937   93                             180   8.   0.03    2.78 0.24 5,8
+04169+2702        I         7344  152                             190   9.   0.03    2.79 0.24 5,8
+04239+2436        I         1144   20 <  660        207.    9.     80  10.   0.009   2.01 0.24 5,8
+04248+2612        I   M2    1178   30                              60   7.   0.005   2.27 0.21 5,8
+04260+2642        I   K6     546   21                             105  10.   0.01    1.26 0.24 5
+04278+2253        II  F1              <  687         36.    7.               0.002  <4.64      
+04295+2251        FS        1338   25                             115  10.   0.01    1.87 0.24 5,8
+04301+2608        II                  <  351         18.    6.               0.0009 <4.67      
+04302+2247        I         2869   21                             180  10.   0.03    2.11 0.24 5,8
+04325+2402        I                      606  185   186.   11.    110   7.   0.008   1.56 0.34 5,8
+04361+2547        I                     1302  168   275.    8.    110   8.   0.01    2.33 0.30 5,8
+04365+2535        I                     2928  230   622.   13.    230  10.   0.03    2.40 0.30 5,8
+04368+2557        I                     2849  222   895.   11.               0.04    1.82 0.42 8
+04381+2540        I                     1152  279   208.   11.     70   9.   0.009   2.64 0.30 5,8
+AA Tau            II  K7     825   50    415   84   144.    5.     88   9.   0.01    1.56 0.20 3,6
+AB Aur            II  A0    8930 1410   3820  570   359.   67.    103  18.   0.004   3.47 0.20 2
+Anon 1            III M0              <   79      <   8.        <  14       <0.0004            4
+BP Tau            II  K7              <  456        130.    7.     47   0.7  0.02    2.39 0.53 2
+CIDA-2            III M5              <  165      <  14.                    <0.0007            
+CIDA-3            II  M2              <   94      <   9.                    <0.0004            
+CIDA-7            II  M3                 990  330    38.    8.               0.002   5.13 0.62 7
+CIDA-8            II  M4              <   80         27.    3.               0.001  <1.73      
+CIDA-9            II  M0                 843  259    71.    7.               0.003   3.89 0.51 
+CIDA-10           III M4              <   94      <  11.                    <0.0005            
+CIDA-11           II  M3              <   87      <   8.                    <0.0004            
+CIDA-12           II  M4              <   88      <   7.                    <0.0004            
+CI Tau            II  K7    1725   55    846   89   324.    6.    190  17.   0.03    1.79 0.21 3,6
+CoKu Tau/1        II  M0              <  522         35.    7.  <  12        0.002  <4.25      4
+CoKu Tau/3        II  M1              <  104      <   8.        <  16       <0.0004            4
+CoKu Tau/4        II  M2              <  131          9.0   2.9 <  15        0.0005 <4.21      4
+CW Tau            II  K2    1230  102 <  312         66.    6.     96   8.   0.002   2.09 0.24 3,6
+CX Tau            II  M3              <  570         25.    6.  <  40        0.001  <4.92      3
+CY Tau            II  M1 <  1839      <  210        140.    5.    133  11.   0.006   0.75 0.56 3,6,7
+CZ Tau            II  M2              <  262      <   9.        <  30       <0.0004            3
+DD Tau            II  M1                          <  42.           17   4.   0.0007            4
+DE Tau            II  M2              <  291         90.    7.     36   5.   0.005   2.16 0.40 4
+DF Tau            II  M1              <  304          8.8   1.9 <  25        0.0004 <5.57      1,3
+DG Tau            FS  K7    5173   94   3950  350  1100.  100.    700 130.   0.02    2.02 0.12 2,6
+DH Tau            II  M1     261    9                57.    9.  <  57        0.003   1.71 0.33 3
+DK Tau            II  K7              <  419         80.   10.     35   7.   0.005   1.95 0.55 3
+DL Tau            II  K7    1390  180   1280  170   440.   40.    230  14.   0.09    1.54 0.15 2,3,6
+DM Tau            II  M1    1077   49               237.   12.    109  13.   0.02    1.74 0.24 3
+DN Tau            II  M0     615   64 <  703        201.    7.     84  13.   0.03    1.53 0.23 3,6
+DO Tau            II  M0                 734   50   258.   42.    136  11.   0.007   1.66 0.19 1,3,6
+DP Tau            II  M1              <  279      <  10.        <  27       <0.0005            3
+DQ Tau            II  M0     244   76 <  861        208.    8.     91   9.   0.02    1.21 0.27 3,6
+DR Tau            II                    2380  172   533.    7.    159  11.   0.02    2.07 0.19 1,3,6
+DS Tau            II  K5              <  342         39.    4.     25   6.   0.006   1.05 0.61 1,4,7
+FF Tau            III K7              <   43      <   4.        <  27       <0.0002            1,3
+FM Tau            II  M0 <   349      <  442         32.    8.  <  36        0.002  <4.13      3
+FO Tau            II  M2              <  199         13.    3.  <  14        0.0006 <4.29      1,4
+FQ Tau            II  M2                 574  170    28.    7.  <  40        0.001   4.75 0.61 3,7
+FS Tau            FS  M1              <  576         49.    6.  <  35        0.002  <3.87      3
+FT Tau            II        1106   82    437   56   121.    5.    130  14.   0.01    1.66 0.20 3,6
+FV Tau            II  K5                 402   90    48.    5.     15   4.   0.001   3.15 0.34 1,4
+FV Tau/c          II  M4              <  355      <  25.        <  16       <0.001             4
+FW Tau            III M4              <   35          4.5   1.1 <  15        0.0002 <3.23      1,3
+FX Tau            II  M1              <  169         17.    3.  <  30        0.0009 <3.62      3
+FY Tau            II  K7              <  297      <  27.           16   5.   0.0007            3
+FZ Tau            II  M0              <  273         29.    7.     23   7.   0.002   0.55 0.89 3,7
+GG Tau            II  K7    6528  153   2726  250  1255.   57.    593  53.   0.2     1.91 0.12 1,3,6
+GH Tau            II  M2              <  309         15.    3.  <  30        0.0007 <4.76      1,3
+GK Tau            II  K7                             33.    7.  <  21        0.002             3
+GM Aur            II  K3    3419  133                             253  12.   0.03    2.25 0.23 3,6
+GN Tau            II                  <  187         12.    3.  <  50        0.0006 <4.32      1,3
+GO Tau            II  M0     274   26    594  185   173.    7.     83  12.   0.07    1.77 0.33 3,6
+GV Tau            I   K3    1676  137   1808  121   282.    5.     87   4.   0.003   2.51 0.20 4,6
+Haro 6-13         FS  M0    2729  171   1400  180   395.   56.    124  13.   0.01    2.15 0.18 1,3,6
+Haro 6-28         FS  M5              < 2636         11.    3.  <  14        0.0006 <8.55      1,4
+Haro 6-37         II  K6                 536  204   245.    7.  <  88        0.01    1.23 0.62 4
+Haro 6-39         II                  <  903         36.    6.     24   6.   0.002   0.95 0.72 3,7
+HBC 347           III K1              <  138      <   9.                    <0.0004            4
+HBC 351           III K5              <  166      <  11.        <  14       <0.0005            4
+HBC 352/353       III G0              <   81      <   9.        <  12       <0.0005            4
+HBC 354/355       III K3              <   71      <   7.        <  16       <0.0004            4
+HBC 356/357       III K2              <   69      <   9.        <  16       <0.0004            4
+HBC 358/359       III M2              <   72      <   9.        <  13       <0.0005            4
+HBC 360/361       III M3              <  243      <  14.        <  26       <0.0007            1,4
+HBC 362           III M2              <  108      <   8.        <  14       <0.0004            4
+HBC 372           III K5              <  173      <   8.        <  14       <0.0004            4
+HBC 376           III K7              <   49      <   6.        <  14       <0.0003            1,4
+HBC 388           III K1              <   54      <   6.        <  16       <0.0003            1,4
+HBC 392           III K5              <  141      <   6.        <  18       <0.0003            1,4
+HBC 407           III G8              <  146      <   9.        <  64       <0.0004            4
+HBC 412           III M2              <  200      <   9.        <  16       <0.0004            4
+HBC 427           III K7              < 1516      <  14.                    <0.0007            1
+HD 283572         III G5              <  216      <   9.        <  15       <0.0004            4
+HD 283759         III F3              <  149      <  10.        <  35       <0.0005            3
+HK Tau            FS  M1     680  114                              41   5.   0.004   2.14 0.21 3,6
+HL Tau            I   K7   23888  149  10400 1400  2360.   90.    880  19.   0.06    2.53 0.13 2,3,6,8
+HN Tau            II  K5              <  171         29.    3.  <  15        0.0008 <2.79      1,4
+HO Tau            II  M1              <  567         44.    6.  <  30        0.002  <4.02      3
+HP Tau            FS  K3     386   63                              62   6.   0.001   1.39 0.24 3
+HQ Tau            III                 <  221         11.    3.  <  45        0.0005 <4.72      1,3
+Hubble 4          III K7              <   89      <   9.        <  25       <0.0004            3
+HV Tau            II  M1              <  519         47.    4.     40   6.   0.002   0.38 0.42 1,4,7
+IC 2087/IR        II                    1365  130   501.    7.               0.02    1.58 0.42 
+IP Tau            II  M0              <  516         34.    5.     16   5.   0.003   1.80 0.81 4,7
+IQ Tau            II  M1                 425   26   178.    3.     87  11.   0.02    1.53 0.30 3,6
+IS Tau            II  K7              <  252         30.    3.  <  20        0.001  <3.35      1,3
+IT Tau            II  K2              <   73         22.    3.  <  33        0.002  <1.86      3
+IW Tau            III K7              <  253      <   9.        <  19       <0.0004            1,4
+J1-4423           III M5              <   52      <   8.        <  11       <0.0004            4
+J1-4872           III K7              <   63      <   8.        <  14       <0.0004            4
+J1-507            III M4              <   52      <   6.        <  14       <0.0003            4
+JH 56             III M1              <   74      <   8.        <  19       <0.0004            4
+JH 108            III M1              <   66      <   7.        <  18       <0.0004            4
+JH 112            II  K6                             30.   10.  <  18        0.001  <5.51      4
+JH 223            II  M2              <   62      <   7.        <  19       <0.0003            4
+L1551-51          III K7              <  201      <  13.                    <0.0006            
+L1551-55          III K7              <   60      <   5.        <  23       <0.0003            1,4
+L1551 IRS5        I       100423  812                            1276   5.   0.5     2.95 0.17 4,8
+L1551 NE          I        22826  715                             850  10.   0.3     2.51 0.24 5
+LkCa 1            III M4              <   89      <   8.        <  14       <0.0004            4
+LkCa 3            III M1              <  471      <   9.        <  14       <0.0004            1,4
+LkCa 4            III K7              <   37      <   4.        <  14       <0.0002            1,4
+LkCa 5            III M2              <   28      <   4.        <  14       <0.0002            1,4
+LkCa 7            III K7              <  107      <   9.                    <0.0004            
+LkCa 14           III M0              <  103      <   9.        <  19       <0.0004            4
+LkCa 15           II  K5    1235   80               428.   11.    167   6.   0.05    1.49 0.24 4
+LkCa 19           III K0              <   90      <  10.                     0.0005            
+LkCa 21           III M3              <  145      <  10.        <  12       <0.0005            4
+LkH{alpha} 332/G1 III M1              <  663         12.    3.  <  14        0.0006 <6.38      1,4
+LkH{alpha} 332/G2 III K7              < 1083      <   9.        <  15       <0.0005            1,4
+RW Aur            II  K3     305   32    167   34    79.    4.     42   5.   0.004   1.43 0.21 4
+RY Tau            II  K1    2439  330   1920  160   560.   30.    229  17.   0.02    1.79 0.17 2,3,6
+SAO 76411         III G1              <  102      <   9.        <  14       <0.0005            4
+SAO 76428         III F8              <  123      <  12.        <  14       <0.0006            4
+St 34             II  M3              <  243      <  11.        <  15       <0.0005            4
+SU Aur            II  G2                 251   40    74.    3.  <  30        0.0009  1.73 0.21 3
+T Tau             II  K0    8149  253   1655  218   628.   17.    280   9.   0.008   2.13 0.30 1,3,6,8
+UX Tau            II  K2                 523   37   173.    3.     63  10.   0.005   2.00 0.30 4
+UY Aur            II  K7     542   77 <  523        102.    6.     29   6.   0.002   2.19 0.24 4
+UZ Tau            II  M1    1823  142   1811  129   560.    7.    172  15.   0.02    1.92 0.20 1,3,6
+V410 Tau          III K3              <  206          7.2   1.8 <  30       <0.0004 <5.27      1,3,7
+V710 Tau          II  M1              <  495        152.    6.     60   7.   0.007   2.19 0.36 4,6
+V773 Tau          II  K3              <  386          9.2   2.9    24   4.   0.0005 <5.88      1,4,7
+V807 Tau          III K7              <  202         20.    3.  <  18        0.001  <3.64      1,4
+V819 Tau          III K7              <  317      <   9.        <   9       <0.0004            1,4
+V826 Tau          III M0              <  234      <   7.        <  15       <0.0004            1,4
+V827 Tau          III K7              <  147      <   6.        <  19       <0.0003            1,4
+V830 Tau          III M0              <   57      <   6.        <   9       <0.0003            1,4
+V836 Tau          II  K7     344   30    231   43    74.    3.     37   6.   0.01    1.70 0.24 4
+V892 Tau          II  A0    4100  560   2570  350   638.   54.    234  19.   0.009   2.20 0.19 2,6
+V927 Tau          III M5              < 1030      <  10.        <  20       <0.0005            1,3
+V928 Tau          III M1              <  258      <   8.        <  11       <0.0004            1,4
+V955 Tau          II  M0              <  390         14.    2.  <  19        0.0005 <5.27      1,4
+VY Tau            II  M0              <  225      <  10.        <  17       <0.0005            1,4
+Wa Tau/1          III K0              <   55      <   6.        <  19       <0.0003            1,4
+ZZ Tau            III M3              <  251      <   8.        <  15       <0.0004            1,3
