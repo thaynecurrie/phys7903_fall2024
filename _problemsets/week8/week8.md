@@ -36,7 +36,7 @@
 The file ``diskmasses.txt`` now found in the problem set directory for this section contains estimates for the masses (er, log(disk mass)) of protoplanetary disks for a large number of stars in the Taurus-Aurigae star-forming region.   
 
 * Read in this file using ``np.loadtxt``.  
-* Compute the mean, median, and variance of the log(disk mass).   
+* Compute the mean, median, and _sample_ variance of the log(disk mass) with NumPy .   
 * Compute the 25th and 75th percentile for log(disk mass).
 
 
