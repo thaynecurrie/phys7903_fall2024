@@ -62,7 +62,7 @@ Consider ...
 
 ### 5. Goodness-of-Fit, $\chi_{\nu}^{2}$
 
-See the attached figure panel comparing the spectrum of a brown dwarf to a library of other substellar objects.   Assume that each model fit loses one degree of freedom. 
+See the attached figure panel comparing the spectrum of a brown dwarf to a library of other substellar objects.   Assume that each model fit loses one degree of freedom (so $\nu$ = 1). 
 
 - Compute the $\chi^{2}$ values for the three model fits.
 - Compute the $p$ values for the three model fits.  
