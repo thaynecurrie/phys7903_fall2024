@@ -16,11 +16,10 @@
 * read in ``compilation.txt`` 
 * reproduce the following plot
 
-![](./prob2.png)
 
-
-
-* note: the array slicing is a little bit tricky (ideally you want a vectorized string operation with wildcards).  Here's a simple version:
+ ![](./cmd.png)
+ 
+ * note: the array slicing is a little bit tricky (ideally you want a vectorized string operation with wildcards).  Here's a simple version:
 
 ```
 lowg=np.where( ( flag == 'lowg') | (flag == 'young') | (flag == 'lowg,young') | (flag == 'ABDor,lowg,young')
@@ -45,8 +44,6 @@ lowg=np.where( ( flag == 'lowg') | (flag == 'young') | (flag == 'lowg,young') | 
  eJ = column 28
  H = column 30
  eH = column 31
-
- ![](./cmd.png)
  
 ### 3. Multi-Panel Plots
 
