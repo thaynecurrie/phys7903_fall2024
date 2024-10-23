@@ -61,7 +61,17 @@ From the same data as above, produce the following plot (you will have to read i
 ![](./prob4.png)
 
 
-### 4. TBD
+### 4. Formatted Error Bar Plots
+
+Start with the file ``test3.csv`` similar to (but not exactly the same as!) that from the Week 4 homework.  As a reminder, the first row in this table is a list of column headers.   
+
+* Plot the radius (in Jupiter radii) vs semimajor axis for all planets detected by the transit method, including errors in the radius and and semimajor axis (examine the file headers to see which one to use).
+
+* use a log scale for the y axis ``plt.yscale('log')``
+
+Reproduce the output as follows:
+
+![](./transit_plot.png)
 
 
 ### 5. TBD
