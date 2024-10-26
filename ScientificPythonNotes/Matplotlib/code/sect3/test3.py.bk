@@ -1,0 +1,182 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.ticker import AutoMinorLocator
+
+def run():
+
+ from scipy.optimize import leastsq
+ N=1000 #number of data points
+ t=np.linspace(0,4*np.pi,N)
+ data=3*np.sin(t+0.001)+0.5+np.random.randn(N)
+ guess_mean=np.mean(data)
+ guess_std=3*np.std(data)
+ guess_phase =0
+ guess_freq=1
+ guess_amp=1
+
+ data_first_guess = guess_std*np.sin(t+guess_phase) + guess_mean
+ optimize_func = lambda x: x[0]*np.sin(x[1]*t+x[2]) + x[3] - data
+ est_amp, est_freq, est_phase, est_mean = leastsq(optimize_func, [guess_amp, guess_freq, guess_phase, guess_mean])[0]
+ data_fit = est_amp*np.sin(est_freq*t+est_phase) + est_mean
+ fine_t = np.arange(0,max(t),0.1)
+ data_fit=est_amp*np.sin(est_freq*fine_t+est_phase)+est_mean
+ #plt.plot(t,data,'.',color='tab:blue',alpha=0.7)
+
+ fig,axes=plt.subplots()
+
+ tp=t/np.pi
+ axes.scatter(tp,data,color='lime',alpha=0.3,edgecolor='black')
+ axes.plot(tp,data_first_guess,label='initial guess')
+ axes.plot(fine_t/np.pi,data_fit,label='lst sq fit',color='magenta',linewidth=3)
+ axes.fill_between(fine_t/np.pi,data_fit,alpha=0.35)
+ axes.set_ylabel('Sine Function',size=14,weight='bold')
+ axes.set_xlabel('Angle (Radians)/$\pi$',size=14,weight='bold')
+ axes.xaxis.set_minor_locator(AutoMinorLocator(5))
+ axes.yaxis.set_minor_locator(AutoMinorLocator(5))
+
+ axes.legend(loc='best')
+ plt.show()
+ 
+def run2():
+
+ xarray=np.arange(20)   #an array of numbers from 0 to 19
+ yarray=np.arange(20)+3*np.random.randn(20)
+ #y is same as x EXCEPT now we vary the value +/- some random number about x
+
+ a,b=np.polyfit(xarray,yarray,1)
+ #a polynomial fit of degree one look up the documentation if you are curious
+
+ y_est=xarray*a+b
+ #y_err=xarray.std()*np.sqrt(1/len(xarray)+(xarray-xarray.mean())**2/np.sum((xarray-xarray.mean())**2.))
+
+#'variance of the predicted response': https://en.wikipedia.org/wiki/Variance_of_the_mean_and_predicted_responses
+ y_err=(yarray-y_est).std()*np.sqrt(1/len(xarray) + (xarray-xarray.mean())**2/np.sum((xarray-xarray.mean())**2))
+
+ yarray2=(np.arange(20))**2.+20*np.random.randn(20)
+
+ #polynomial of degree two
+ a2,b2,c2=np.polyfit(xarray,yarray2,2)
+
+ poly=np.poly1d(np.polyfit(xarray,yarray2,2))
+ #a convenience class to write the polynomial fit
+
+#5 times 'variance of the predicted response': https://en.wikipedia.org/wiki/Variance_of_the_mean_and_predicted_responses
+ y_err2=5*(yarray2-poly(xarray)).std()*np.sqrt(1/len(xarray) + (xarray-xarray.mean())**2/np.sum((xarray-xarray.mean())**2))
+
+ fig,axes=plt.subplots(1,2,figsize=(9.6,4.8))
+#the default width is 6.4 inches by 4.8 inches, here increase width by 50%
+
+ fig.subplots_adjust(wspace=0.325)
+ axes[0].plot(xarray,xarray*a+b,label='Linear fit with y = {0:.2f}*x + {1:.2f}'.format(a,b))
+ 
+ axes[0].fill_between(xarray,y_est-y_err,y_est+y_err,alpha=0.2)
+ axes[0].scatter(xarray,yarray,marker='o',s=150,alpha=0.7,label=r'$Random_{num}$',color='brown')
+ axes[0].legend(loc='upper left',fontsize='xx-small',handlelength=1,markerscale=0.85)
+
+ axes[1].plot(xarray,poly(xarray),c='tab:green',label=r'Quadratic fit with y = {0:.2f}*$x^2$+{1:.2f}*$x$+{2:.2f}'.format(a2,b2,c2))
+
+ axes[1].fill_between(xarray,poly(xarray)-y_err2,poly(xarray)+y_err2,alpha=0.2)
+
+ axes[1].scatter(xarray,yarray2,marker='s',c='orange',s=50, label=r'$Random_{num}$, quadratic')
+ axes[1].legend(loc='upper left',fontsize='xx-small',handlelength=1)
+
+ for i in range(len(axes)):
+
+  axes[i].set_xlabel('Initial $X_{Array}$',font='Verdana',size=14,color='black',weight='bold')
+  axes[i].set_ylabel(r'Output,$Y_{Array, random}$',font='Verdana',size=14,color='black',weight='bold')
+ 
+ plt.show()
+
+def run3(agefile='./files/table2cds.dat'):
+
+ import numpy as np
+ import math
+ import scipy
+ import matplotlib.pyplot as plt
+ import astropy
+ from astropy.io import ascii
+ 
+ from astroquery.simbad import Simbad
+ import astropy.units as u
+ import astropy.coordinates as coord
+ from astroquery.gaia import Gaia
+ from astropy.coordinates import SkyCoord
+ 
+ Gaia.MAIN_GAIA_TABLE = "gaiaedr3.gaia_source"
+ radius=u.Quantity(1.0/3600.0,u.deg)
+ Simbad.add_votable_fields('parallax')
+
+
+ tab_sm=ascii.read(agefile)
+
+ names=tab_sm['ID']
+ median_age=np.log10(tab_sm['50AgeF']*1e6)
+ #median_age=tab_sm['50AgeF']
+
+ bmvcolor=tab_sm['B-V']
+ print(bmvcolor)
+ exit()
+
+ #now make the figure
+
+ fig,ax=plt.subplots(1,2,figsize=(9,18),tight_layout=True)
+
+ #plt.savefig('agehist_sn.png')
+
+
+ #now figure out total number
+ #print("total number of targets is %f " % len(tab_sm))
+ print("total number of targets is {0:d} ".format(len(tab_sm)))
+
+# exit()
+
+ vyoung=np.where(median_age <=8.0)
+ young=np.where(median_age <= 8.3)
+ intermed=np.where((median_age >8.3) & (median_age <= 9))
+ print(len(median_age[vyoung]),len(median_age[young]),len(median_age[intermed]))
+
+ distancerange=[]
+ for i in range(0,len(names)):
+  #print('the name is %s ' % names[i])
+  results=Simbad.query_object(names[i])
+  print(results)
+  exit()
+  try:
+   plxvalue=results['PLX_VALUE']
+   distancerange.append(np.float(1e3/plxvalue))
+  except:
+   distancerange.append(999999)
+
+ distancerange=np.array(distancerange)
+ print(distancerange)
+
+# fig,ax=plt.subplots(1,1,figsize=(9,9))
+
+ ax[0].scatter(median_age,distancerange,alpha=0.3,edgecolor='black')
+ ax[0].set_xlabel('log(Age) (yr)')
+ ax[0].set_ylabel('Distance (pc)')
+ ax[0].set_xlim(7,10)
+ ax[0].set_ylim(0,100)
+
+
+ weights=np.ones_like(median_age)/len(median_age)
+ #ax.set_xscale('log')
+ ax[1].set_xlabel('log(Age) (yr)')
+ ax[1].set_ylabel('Relative Number of Nearby Stars at a Given Age')
+ ax[1].set_xlim(7,9.75)
+ ax[1].set_ylim(0,1)
+ #nbin=math.ceil((median_age.max[1]()-median_age.min())/0.25)
+ w=0.125
+ nbin=math.ceil((9.75-7)/w)
+ ax[1].hist(median_age,bins=nbin,histtype='stepfilled',density='True',stacked='True',lw=3)
+
+ ax[1].axvline(x=np.log10(5e8),c='C1',linestyle='dashed',linewidth=2)
+ ax[1].axvline(x=np.log10(4e7),c='C2',linestyle='dashed',lw=2)
+ ax[1].axvline(x=np.log10(4.5e9),c='cyan',linestyle='dashed',lw=2)
+ ax[1].text(np.log10(4.5e9)-0.425,0.75,'4.5 Gyr')
+ ax[1].text(np.log10(5e8)+0.01,0.65,'500 Myr')
+ ax[1].text(np.log10(4e7)+0.01,0.5,'40 Myr')
+
+
+ plt.show()
+
