@@ -49,7 +49,7 @@ lowg=np.where( ( flag == 'lowg') | (flag == 'young') | (flag == 'lowg,young') | 
 
 From the same data as above, produce the following plot (you will have to read in J, H, K and L photometry and errors).
 
-**Hint** -  the convention for the columns is the same as in problem 5:
+**Hint** -  the convention for the columns is the same as in problem 2:
 
   (i.e. K and L are columns 33 and 36, respectively)
 
@@ -71,13 +71,8 @@ Reproduce the output as follows:
 ![](./transit_plot.png)
 
 
-### 5. TBD
 
-
-### 6. TBD
-
-
-### 7. Project Update
+### 5. Project Update
 
 * Please give me a (**short**) update on the progress of your class project.  In particular, I would like to see ...
 
