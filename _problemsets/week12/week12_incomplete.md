@@ -54,14 +54,14 @@ axes[1].legend(loc='best',fontsize='large')
  ```
  
  Just to be clear, this produces the following plot:
- ![](./Ex2_2.png)
+ ![](./ex2_2.png)
  
  
  **NOW ...**
  
  **Adjust this plot** using information from the Axis Limits, Scaling, and Formatting section and elsewhere to produce the following modified plot:
  
- ![](./Ex2_2revised2.png)
+ ![](./ex2_2revised2.png)
  
  
  
