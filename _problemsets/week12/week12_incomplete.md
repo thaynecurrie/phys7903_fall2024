@@ -116,4 +116,35 @@ primary_wvlh=primary_spec[0,:]
 primary_flux=primary_spec[1,:]
 ```
 
-### 3. TBD
+### 4. Twin Axes
+
+From pirates now to something slightly more serious ...
+
+Start with the Co2 concentration and year arrays in the lecture notes to Matplotlib Part2c.  I.e.
+
+```
+#generating data for main axis
+CO2concentration=np.array([289,288,291,295,294,298,297,299,310,317,325,338,354,370,390.1,401,420]) #roughly estimated from NOAA
+CO2years=np.array([1700,1750,1800,1850,1875,1900,1925,1950,1960,1970,1980,1990,2000,2005,2010,2015,2020])
+```
+
+And now read in global mean temperature anomaly data from [https://climate.copernicus.eu/climate-indicators/temperature]()
+
+You can read in the data as follows:
+
+```
+a=np.loadtxt('climate_data.txt')
+```
+The year is the first column; the Berkeley, Hadley Centre, and NOAA measurements are columns 2, 3, and 4.
+
+Use twin axes to reproduce this plot
+
+![](./tempvco2.png)
+
+Here, the green line is the mean temperature anomaly from three separate measurements, blue is the standard deviation of these measurements.
+ 
+### 5. TBD
+ 
+ 
+### 6. TBD
+
