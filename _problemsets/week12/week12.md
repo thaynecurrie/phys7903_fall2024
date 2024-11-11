@@ -142,9 +142,29 @@ Use twin axes to reproduce this plot
 ![](./tempvco2.png)
 
 Here, the green line is the mean temperature anomaly from three separate measurements, blue is the standard deviation of these measurements.
+
+### 5. Shadings/Fill-Between Plots
+
+* read in files for spectra for HIP 99770 b and HD 33632 Ab.  The columns are: Wavelength (microns), Flux Density (mJy), uncertainty in Flux Density (mJy), Signal-to-noise Ratio
+
+* scale the HD 33632 Ab spectrum so that the mean value of its spectrum and HIP 99770 b's spectrum are the same (using np.mean).
+
+You will produce two side-by-side panels:
+
+Panel 1
+
+* Use the plt.plot to produce a line plot _with_ symbols corresponding to individual data points
+* Use the fill-between function to shade in regions +/- the uncertainties
+* Add a legend and adjust the axes formatting to thicken the spines, add labels, and add 5 minor tick marks in between major ticks
+
+Panel 2
+
+* Same as panel 1 except you are doing simple error bar plots, not fill-between.
+
+The resulting figure should look as follows:
+
+![](./prob5_rev.png)
+
  
-### 5. TBD
- 
- 
-### 6. TBD
+
 
