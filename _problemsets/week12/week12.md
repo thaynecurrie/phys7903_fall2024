@@ -1,6 +1,6 @@
 # _Python for Scientific Data Analysis_
 
-## Homework #8 - Week 12 [INCOMPLETE] 
+## Homework #8 - Week 12 
 (_the full assignment will be due November 15_)
 
 ### 1. Project Update
