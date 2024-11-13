@@ -1,0 +1,81 @@
+>>> Kmag=result[0]['Kmag']
+>>> import matplotlib.pyplot as plt
+>>> fig,ax=plt.subplots()
+>>> linewidths = 2
+>>> axislinewidths = 2
+>>> lenticks = 6
+>>> 
+>>> rc('font', family='sans-serif', size=18)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rc' is not defined
+>>> rc('xtick.major', size=lenticks)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rc' is not defined
+>>> rc('xtick.minor', size=lenticks * 2 / 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rc' is not defined
+>>> rc('ytick.major', size=lenticks)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rc' is not defined
+>>> rc('ytick.minor', size=lenticks * 2 / 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rc' is not defined
+>>> rc('lines', linewidth=linewidths)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rc' is not defined
+>>> rc('axes', linewidth=axislinewidths)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rc' is not defined
+>>> from matplotlib import rc
+>>> linewidths = 2
+>>> axislinewidths = 2
+>>> lenticks = 6
+>>> 
+>>> rc('font', family='sans-serif', size=18)
+>>> rc('xtick.major', size=lenticks)
+>>> rc('xtick.minor', size=lenticks * 2 / 3)
+>>> rc('ytick.major', size=lenticks)
+>>> rc('ytick.minor', size=lenticks * 2 / 3)
+>>> rc('lines', linewidth=linewidths)
+>>> rc('axes', linewidth=axislinewidths)
+>>> ax.hexbin(Jmag-Kmag,Jmag,bins='log',mincnt=1)
+<matplotlib.collections.PolyCollection object at 0x11baffbe0>
+>>> ax.set_xlabel(r'$J-K_{\rm s}')
+Text(0.5, 0, '$J-K_{\\rm s}')
+>>> ax.set_ylabel(r'$J$')
+Text(0, 0.5, '$J$')
+>>> ax.invert_yaxis()
+>>> plt.show()
+>>> ax.set_xlabel(r'$J-K_{\rm s}$')
+Text(0.5, 47.04444444444444, '$J-K_{\\rm s}$')
+>>> ax.hexbin(Jmag-Kmag,Jmag,bins='log',mincnt=1)
+<matplotlib.collections.PolyCollection object at 0x11ba123e0>
+>>> plt.show()
+>>> fig,ax=plt.subplots()
+>>> ax.hexbin(Jmag-Kmag,Jmag,bins='log',mincnt=1)
+<matplotlib.collections.PolyCollection object at 0x11bda2bc0>
+>>> plt.show()
+>>> fig,ax=plt.subplots()
+>>> ax.invert_yaxis()
+>>> ax.hexbin(Jmag-Kmag,Jmag,bins='log',mincnt=1)
+<matplotlib.collections.PolyCollection object at 0x11be81cc0>
+>>> plt.show()
+>>> fig,ax=plt.subplots()
+>>> ax.hexbin(Jmag-Kmag,Jmag,bins='log',mincnt=1)
+<matplotlib.collections.PolyCollection object at 0x11c4235e0>
+>>> ax.set_xlim(-0.5,2)
+(-0.5, 2.0)
+>>> ax.hexbin(Jmag-Kmag,Jmag,bins='log',mincnt=1)
+<matplotlib.collections.PolyCollection object at 0x11c423c40>
+>>> ax.invert_yaxis()
+>>> plt.show()
+>>> result2=Vizier.query_region("NGC 869",radius=0.1*u.deg,catalog='II/246/out')
+>>> exit()
+
