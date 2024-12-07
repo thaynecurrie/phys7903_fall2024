@@ -1,3 +1,5 @@
+### Due December 11
+
 ### Problem 1 Feedback (8 pts)
 
 
@@ -32,6 +34,14 @@ Assume that the pixel scale is roughly 9.952 milliarcseconds/pixel and that the 
 * Compute photometry of the star (from "nopsfsub" and the companion (from "psfsub") with this aperture radius both in units of counts.  Then compute the contrast between the star and the planet in units of magnitudes (note: do not overthink this: it's as simple as it sounds).
 
 
+Hints: 
+
+* to figure out a good initial guess for the centroid positions, try doing the extra credit part by displaying the image using Matplotlib: the notes give a good recipe for how to do this.
+
+* look at the notes on photutils VERY closely to figure out how to plot the radial profile.   The answer for the half-peak value will be in between two integers: again, round up to get the aperture radius you should use.
+* you do not need to compute astrometric errors or photometric errors
+
+
 **Extra Credit** (3 points)
 
 - Display the image as shown below
@@ -42,9 +52,3 @@ Assume that the pixel scale is roughly 9.952 milliarcseconds/pixel and that the 
 
  
 
-Hints: 
-
-* to figure out a good initial guess for the centroid positions, try doing the extra credit part by displaying the image using Matplotlib: the notes give a good recipe for how to do this.
-
-* look at the notes on photutils VERY closely to figure out how to plot the radial profile.   The answer for the half-peak value will be in between two integers: again, round up to get the aperture radius you should use.
-* you do not need to compute astrometric errors or photometric errors
